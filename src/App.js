@@ -1,4 +1,3 @@
-
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Footer from "./components/Common/Footer";
 import SearchModal from "./components/Common/SearchModal";
@@ -13,36 +12,39 @@ import PortfolioDetails from "./pages/portfolio/PortfolioDetails";
 import { useState } from "react";
 import Contact from "./pages/contact";
 
-
-
 function App() {
   const [active, setActive] = useState(false);
 
-  const isClicked = () =>{
-      setActive(!active);
-  }
+  const isClicked = () => {
+    setActive(!active);
+  };
 
   return (
     <>
       <BrowserRouter>
-          <main id="main">
-          <NavBar isClicked={isClicked}/>
+        <main id="main">
+          <NavBar isClicked={isClicked} />
 
-            {/* Preloader  */}
+          {/* Preloader  */}
 
-            <SearchModal isClicked={isClicked} isActive={active}/>
-            <Routes>
-              <Route path="/" element={<HomePage/>} />
-              <Route path="/about" element={<AboutPage/>}></Route>
-              <Route path="/casestudy" element={<CaseStudy/>}></Route>
-              <Route path="/portfolio" element={<Portfolio/>}></Route>
-              <Route path='/case_study/:id/:cat/:slug' element={<CaseDetails/>}></Route>
-              <Route path='/portfolio/:id/:cat/:slug' element={<PortfolioDetails/>}></Route>
-              <Route path='/contact' element={<Contact/>}></Route>
-            </Routes>
-            <Footer/>
-
-          </main>
+          <SearchModal isClicked={isClicked} isActive={active} />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />}></Route>
+            <Route path="/casestudy" element={<CaseStudy />}></Route>
+            <Route path="/portfolio" element={<Portfolio />}></Route>
+            <Route
+              path="/case_study/:id/:cat/:slug"
+              element={<CaseDetails />}
+            ></Route>
+            <Route
+              path="/portfolio/:id/:cat/:slug"
+              element={<PortfolioDetails />}
+            ></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
+          <Footer />
+        </main>
       </BrowserRouter>
     </>
   );

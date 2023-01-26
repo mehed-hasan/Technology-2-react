@@ -2,9 +2,8 @@ import Slider from "react-slick";
 import { HomeHeroSlider } from "../../data/home";
 import HeroSliderEl from "./HeroSliderEl";
 
+
 function HomeHero() {
-
-
         const settings = {
           slidesToShow: 1,
           slidesToScroll: 1,

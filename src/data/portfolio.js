@@ -298,7 +298,7 @@ const portfolio = {
     },
     {
       id: 18,
-      title: "There are many variations of passages",
+      title: "There are many variations of passages ",
       slug: "There-are-many-variations-of-passages",
       thumbnail: "portfolio1.webp",
       previewImage: "portfolio1.webp",
